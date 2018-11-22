@@ -43,10 +43,10 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'libs/RoutingUtils',
        * after being disconnected.
        */
       self.connected = function() {
-        return self.RoutingUtils.initRouters(self.routers).then();
+        // Implement if needed
 
       };
-	  
+	  	  
 	  self.doFilter = function () {
 		let _inputNumberAsString = '' + self.inputNumber();
 		self.RoutingUtils.go([_inputNumberAsString, self.isoDate()]);	
@@ -65,7 +65,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'libs/RoutingUtils',
        * That includes any possible animation between the old and the new View.
        */
       self.transitionCompleted = function() {
-        // Implement if needed
+        return self.RoutingUtils.initRouters(self.routers).then();
       };
     }
 
