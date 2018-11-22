@@ -1,0 +1,38 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <h1>Dashboard Content Area</h1>
+  <div>
+      To change the content of this section, you will make edits to the dashboard.html file located in the /js/views folder.
+	  
+	  <div class="oj-form-layout">
+            <div class="oj-form oj-sm-odd-cols-12 oj-md-odd-cols-4 oj-md-labels-inline" >
+			
+	  <div class="oj-flex">
+                <div class="oj-flex-item">
+                  <oj-label for="spinnercontrol">input number</oj-label>
+                </div>
+                <div class="oj-flex-item">
+                  <oj-input-number max="100" min="0" step="10" 
+                        value='{{inputNumber}}'></oj-input-number>
+                </div>
+              </div>
+			  <div class="oj-flex">
+                <div class="oj-flex-item">
+                  <oj-label for="datepickercontrol">input date</oj-label>
+                </div>
+                <div class="oj-flex-item">
+                  <oj-input-date 
+                    value='{{isoDate}}'"> </oj-input-date>
+                </div>
+              </div>
+  </div>
+</div>
+
+<oj-button id="submitBtn" on-oj-action="[[doFilter]]">
+	<oj-bind-text value="Filter"></oj-bind-text>
+</oj-button>
+  </div>
+</div>
